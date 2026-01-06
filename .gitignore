@@ -1,8 +1,14 @@
+# Node
+node_modules/
 
 # Playwright
-node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
+playwright-report/
+test-results/
+
+# Env
+.env
+
+# OS
+.DS_Store
+
+
