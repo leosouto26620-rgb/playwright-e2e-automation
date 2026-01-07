@@ -93,6 +93,14 @@ Additional Scenario – Remove Item from Cart
 
 - npm
 
+## Clone the repository
+
+- Clone the repository from GitHub: git clone https://github.com/leosouto26620-rgb/playwright-e2e-automation.git
+
+## Navigate to the project directory
+
+- cd your-repo-name
+
 ## Install dependencies
 
 - npm install
