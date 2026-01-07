@@ -36,4 +36,22 @@ test.describe("Test cases for checkout flow", () => {
     await checkoutPage.validateVisibleText("Thank you for your order!");
 
   });
+  test("Remove item from cart", async ({page}) => {
+        const checkoutPage = new CheckOut(page);
+        await checkoutPage.selectProduct("item-4-title-link");
+        await checkoutPage.validateURL("/inventory-item.html?id=4");
+        await checkoutPage.clickBtn("add-to-cart");
+        await checkoutPage.validateInnerText("shopping-cart-badge", "1");
+        await checkoutPage.clickBtn("back-to-products");
+        await checkoutPage.validateURL("/inventory.html");
+        await checkoutPage.clickBtn("shopping-cart-link");
+        await checkoutPage.validateURL("/cart.html");
+        await checkoutPage.validateVisibleText("Sauce Labs Backpack");
+        await checkoutPage.validateInnerText("item-quantity", "1");
+        await checkoutPage.validateInnerText("inventory-item-price", "$29.99");
+        await checkoutPage.clickBtn("remove-sauce-labs-backpack");
+        await checkoutPage.validateNotVisibleElement("shopping-cart-badge");
+        await checkoutPage.validateNotVisibleElement("inventory-item");
+
+  })
 });

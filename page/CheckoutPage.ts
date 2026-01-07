@@ -45,5 +45,9 @@ export class CheckOut {
     return Number(text.match(/\$([\d.]+)/)![1]);
   }
 
+  async validateNotVisibleElement (name: string){
+    await expect(this.getElement(name)).not.toBeVisible();
+  }
+
   
 }
