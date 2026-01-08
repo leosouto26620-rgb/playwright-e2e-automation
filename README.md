@@ -99,7 +99,7 @@ Additional Scenario – Remove Item from Cart
 
 ## Navigate to the project directory
 
-- cd your-repo-name
+- cd playwright-e2e-automation
 
 ## Install dependencies
 
